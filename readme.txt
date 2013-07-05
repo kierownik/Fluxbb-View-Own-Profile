@@ -4,7 +4,7 @@
 ##
 ##      Mod version:  1.0
 ##   Works on PunBB:  1.5.3
-##     Release date:   
+##     Release date:  Do Not Know Yet :)
 ##           Author:  Daniël Rokven (kierownik) rokven@gmail.com
 ##           Author:  Frank Smit (FSX) FSX.NR01@gmail.com
 ##
@@ -27,19 +27,19 @@
 ##
 
 #
-#---------[ 1. OPEN ]---------------------------------------------------
+#---------[ 1. OPEN ]---------------------------------------------------------
 #
 
 profile.php
 
 #
-#---------[ 2. FIND ]---------------------------------------------------
+#---------[ 2. FIND ]---------------------------------------------------------
 #
 
 else if ($section == 'admin')
 
 #
-#---------[ 3. BEFORE, ADD ]---------------------------------------------------
+#---------[ 3. BEFORE, ADD ]--------------------------------------------------
 #
 
 	// start view profile mod
@@ -70,7 +70,7 @@ else if ($section == 'admin')
 		$url = '<a href="'.$user['url'].'">'.$user['url'].'</a>';
 	}
 	else
-		$url = $lang_profile['Unknown'];
+		$url = $lang_profile['unknown'];
 
 	if ($pun_config['o_avatars'] == '1')
 	{
@@ -112,9 +112,9 @@ else if ($section == 'admin')
 							<dt><?php echo $lang_common['Title'] ?>: </dt>
 							<dd><?php echo ($pun_config['o_censoring'] == '1') ? censor_words($user_title_field) : $user_title_field; ?></dd>
 							<dt><?php echo $lang_profile['Realname'] ?>: </dt>
-							<dd><?php echo ($user['realname'] !='') ? pun_htmlspecialchars(($pun_config['o_censoring'] == '1') ? censor_words($user['realname']) : $user['realname']) : $lang_profile['Unknown']; ?></dd>
+							<dd><?php echo ($user['realname'] !='') ? pun_htmlspecialchars(($pun_config['o_censoring'] == '1') ? censor_words($user['realname']) : $user['realname']) : $lang_profile['unknown']; ?></dd>
 							<dt><?php echo $lang_profile['Location'] ?>: </dt>
-							<dd><?php echo ($user['location'] !='') ? pun_htmlspecialchars(($pun_config['o_censoring'] == '1') ? censor_words($user['location']) : $user['location']) : $lang_profile['Unknown']; ?></dd>
+							<dd><?php echo ($user['location'] !='') ? pun_htmlspecialchars(($pun_config['o_censoring'] == '1') ? censor_words($user['location']) : $user['location']) : $lang_profile['unknown']; ?></dd>
 							<dt><?php echo $lang_profile['Website'] ?>: </dt>
 							<dd><?php echo $url ?>&nbsp;</dd>
 							<dt><?php echo $lang_profile['email'] ?>: </dt>
@@ -185,19 +185,19 @@ else if ($section == 'admin')
 	// end view profile mod
 
 #
-#---------[ 4. OPEN ]---------------------------------------------------
+#---------[ 4. OPEN ]---------------------------------------------------------
 #
 
 lang/English/profile.php
 
 #
-#---------[ 5. FIND ]---------------------------------------------------
+#---------[ 5. FIND ]---------------------------------------------------------
 #
 
 );
 
 #
-#---------[ 6. AFTER, BEFORE ]------------------------------------------------
+#---------[ 6. BEFORE, ADD ]--------------------------------------------------
 #
 
 
@@ -207,13 +207,13 @@ lang/English/profile.php
 'email'           =>  'E-mail',
 
 #
-#---------[ 7. OPEN ]---------------------------------------------------
+#---------[ 7. OPEN ]---------------------------------------------------------
 #
 
 iclude/functions.php
 
 #
-#---------[ 8. FIND ]---------------------------------------------------
+#---------[ 8. FIND ]---------------------------------------------------------
 #
 
 <li<?php if ($page == 'privacy') echo ' class="isactive"'; ?>><a href="profile.php?section=privacy&amp;id=<?php echo $id ?>"><?php echo $lang_profile['Section privacy'] ?></a></li>
@@ -225,12 +225,5 @@ iclude/functions.php
 <li<?php if ($page == 'example') echo ' class="isactive"'; ?>><a href="profile.php?section=example&amp;id=<?php echo $id ?>"><?php echo $lang_profile['Section example'] ?></a></li>
 
 #
-#---------[ 10. SAVE/UPLOAD ]---------------------------------------------------
+#---------[ 10. SAVE/UPLOAD ]-------------------------------------------------
 #
-
-
-
-
-
-
-
