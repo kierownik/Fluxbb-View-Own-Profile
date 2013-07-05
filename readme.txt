@@ -200,11 +200,12 @@ lang/English/profile.php
 #---------[ 6. BEFORE, ADD ]--------------------------------------------------
 #
 
-
 // preview profile mod
-'Section example' =>  'Example',
-'unknown'         =>  'Unknown',
-'email'           =>  'E-mail',
+'section view profile'  =>  'View Profile',
+'view profile'          =>  'View Profile',
+'private'               =>  'Private',
+'unknown'               =>  'Unknown',
+'email'                 =>  'E-mail',
 
 #
 #---------[ 7. OPEN ]---------------------------------------------------------
@@ -222,7 +223,7 @@ iclude/functions.php
 #---------[ 9. AFTER, ADD ]---------------------------------------------------
 #
 
-<li<?php if ($page == 'example') echo ' class="isactive"'; ?>><a href="profile.php?section=example&amp;id=<?php echo $id ?>"><?php echo $lang_profile['Section example'] ?></a></li>
+<li<?php if ($page == 'example') echo ' class="isactive"'; ?>><a href="profile.php?section=example&amp;id=<?php echo $id ?>"><?php echo $lang_profile['section view profile'] ?></a></li>
 
 #
 #---------[ 10. SAVE/UPLOAD ]-------------------------------------------------
