@@ -197,7 +197,7 @@ lang/English/profile.php
 // Begin View Own Profile mod
 'section view own profile'  =>  'View Own Profile',
 'title view own profile'    =>  'View Profile',
-'others see'                =>  'This is what others can you of your profile',
+'others see'                =>  'This is what others see when they view your profile',
 'private'                   =>  'Private',
 'unknown'                   =>  'Unknown',
 'email'                     =>  'E-mail',
