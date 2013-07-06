@@ -1,12 +1,12 @@
 ﻿##
 ##
-##        Mod title:  View Own Profile
+##        Mod title:  View Own Profile(while logged in)
 ##
 ##      Mod version:  1.0
 ##   Works on PunBB:  1.5.3
 ##     Release date:  Do Not Know Yet :)
 ##           Author:  Daniël Rokven (kierownik) rokven@gmail.com
-##           Author:  Frank Smit (FSX) FSX.NR01@gmail.com
+##  Original Author:  Frank Smit (FSX) FSX.NR01@gmail.com
 ##
 ##      Description:  You can see your profile like other 
 ##                    people see your profile (not in edit mode).
@@ -33,19 +33,19 @@
 profile.php
 
 #
-#---------[ 2. FIND ]---------------------------------------------------------
+#---------[ 2. FIND (line: 1686) ]--------------------------------------------
 #
 
-else if ($section == 'admin')
+	else if ($section == 'admin')
 
 #
 #---------[ 3. BEFORE, ADD ]--------------------------------------------------
 #
 
-	// start view profile mod
-		else if ($section == 'viewprofile')
+	// Begin View Own Profile mod
+		else if ($section == 'viewownprofile')
 	{
-		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']).' / '.$lang_profile['view profile']);
+		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']).' / '.$lang_profile['title view own profile']);
 		define('PUN_ACTIVE_PAGE', 'profile');
 		require PUN_ROOT.'header.php';
 
@@ -74,22 +74,16 @@ else if ($section == 'admin')
 
 	if ($pun_config['o_avatars'] == '1')
 	{
-		if ($user['show_avatars'] == '1')
-		{
-			if ($img_size = @getimagesize($pun_config['o_avatars_dir'].'/'.$id.'.gif'))
-				$avatar_field = '<img src="'.$pun_config['o_avatars_dir'].'/'.$id.'.gif" '.$img_size[3].' alt="" />';
-			else if ($img_size = @getimagesize($pun_config['o_avatars_dir'].'/'.$id.'.jpg'))
-				$avatar_field = '<img src="'.$pun_config['o_avatars_dir'].'/'.$id.'.jpg" '.$img_size[3].' alt="" />';
-			else if ($img_size = @getimagesize($pun_config['o_avatars_dir'].'/'.$id.'.png'))
-				$avatar_field = '<img src="'.$pun_config['o_avatars_dir'].'/'.$id.'.png" '.$img_size[3].' alt="" />';
-			else
-				$avatar_field = $lang_profile['unknown'];
-		}
+		if ($img_size = @getimagesize($pun_config['o_avatars_dir'].'/'.$id.'.gif'))
+			$avatar_field = '<img src="'.$pun_config['o_avatars_dir'].'/'.$id.'.gif" '.$img_size[3].' alt="" />';
+		else if ($img_size = @getimagesize($pun_config['o_avatars_dir'].'/'.$id.'.jpg'))
+			$avatar_field = '<img src="'.$pun_config['o_avatars_dir'].'/'.$id.'.jpg" '.$img_size[3].' alt="" />';
+		else if ($img_size = @getimagesize($pun_config['o_avatars_dir'].'/'.$id.'.png'))
+			$avatar_field = '<img src="'.$pun_config['o_avatars_dir'].'/'.$id.'.png" '.$img_size[3].' alt="" />';
 		else
 			$avatar_field = $lang_profile['unknown'];
 	}
 
-	
 	$posts_field = '';
 	if ($pun_config['o_show_post_count'] == '1' || $pun_user['g_id'] < PUN_GUEST)
 		$posts_field = $user['num_posts'];
@@ -99,7 +93,7 @@ else if ($section == 'admin')
 ?>
 
 <div id="viewprofile" class="block">
-	<h2><span><?php echo $lang_common['Profile'] ?></span></h2>
+	<h2><span><?php echo $lang_common['Profile'] ?> - <small><?php echo $lang_profile['others see'] ?></small></span></h2>
 	<div class="box">
 		<div class="fakeform">
 			<div class="inform">
@@ -182,7 +176,7 @@ else if ($section == 'admin')
 <?php
 
 	}
-	// end view profile mod
+	// End View Own Profile mod
 
 #
 #---------[ 4. OPEN ]---------------------------------------------------------
@@ -191,7 +185,7 @@ else if ($section == 'admin')
 lang/English/profile.php
 
 #
-#---------[ 5. FIND ]---------------------------------------------------------
+#---------[ 5. FIND (line: 142) ]---------------------------------------------
 #
 
 );
@@ -200,12 +194,14 @@ lang/English/profile.php
 #---------[ 6. BEFORE, ADD ]--------------------------------------------------
 #
 
-// preview profile mod
-'section view profile'  =>  'View Profile',
-'view profile'          =>  'View Profile',
-'private'               =>  'Private',
-'unknown'               =>  'Unknown',
-'email'                 =>  'E-mail',
+// Begin View Own Profile mod
+'section view own profile'  =>  'View Own Profile',
+'title view own profile'    =>  'View Profile',
+'others see'                =>  'This is what others can you of your profile',
+'private'                   =>  'Private',
+'unknown'                   =>  'Unknown',
+'email'                     =>  'E-mail',
+// End View Own Profile mod
 
 #
 #---------[ 7. OPEN ]---------------------------------------------------------
@@ -214,16 +210,18 @@ lang/English/profile.php
 iclude/functions.php
 
 #
-#---------[ 8. FIND ]---------------------------------------------------------
+#---------[ 8. FIND (line: 526) ]---------------------------------------------
 #
 
-<li<?php if ($page == 'privacy') echo ' class="isactive"'; ?>><a href="profile.php?section=privacy&amp;id=<?php echo $id ?>"><?php echo $lang_profile['Section privacy'] ?></a></li>
+					<li<?php if ($page == 'privacy') echo ' class="isactive"'; ?>><a href="profile.php?section=privacy&amp;id=<?php echo $id ?>"><?php echo $lang_profile['Section privacy'] ?></a></li>
 
 #
 #---------[ 9. AFTER, ADD ]---------------------------------------------------
 #
 
-<li<?php if ($page == 'example') echo ' class="isactive"'; ?>><a href="profile.php?section=example&amp;id=<?php echo $id ?>"><?php echo $lang_profile['section view profile'] ?></a></li>
+<!-- Begin View Own Profile mod -->
+					<li<?php if ($page == 'viewownprofile') echo ' class="isactive"'; ?>><a href="profile.php?section=viewownprofile&amp;id=<?php echo $id ?>"><?php echo $lang_profile['section view own profile'] ?></a></li>
+<!-- End View Own Profile mod -->
 
 #
 #---------[ 10. SAVE/UPLOAD ]-------------------------------------------------
