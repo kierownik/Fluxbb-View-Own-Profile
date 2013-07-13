@@ -3,10 +3,10 @@
 ##        Mod title:  View Own Profile(while logged in)
 ##
 ##      Mod version:  1.0
-##   Works on PunBB:  1.5.3
+##  Works on FLuxBB:  1.5.3
 ##     Release date:  Do Not Know Yet :)
 ##           Author:  Daniël Rokven (kierownik) rokven@gmail.com
-##  Original Author:  Frank Smit (FSX) FSX.NR01@gmail.com
+##  Original Author:  Frank Smit (FSX) FSX.NR01@gmail.com for Punbb
 ##
 ##      Description:  You can see your profile like other 
 ##                    people see your profile (not in edit mode).
@@ -21,7 +21,7 @@
 ##                    include/functions.php
 ##
 ##       DISCLAIMER:  Please note that 'mods' are not officially supported by
-##                    PunBB. Installation of this modification is done at your
+##                    FluxBB. Installation of this modification is done at your
 ##                    own risk. Backup your forum database and any and all
 ##                    applicable files before proceeding.
 ##
