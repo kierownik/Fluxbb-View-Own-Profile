@@ -3,7 +3,7 @@
 ##        Mod title:  View Own Profile(while logged in)
 ##
 ##      Mod version:  1.0
-##  Works on FLuxBB:  1.5.3
+##  Works on FLuxBB:  1.5.4
 ##     Release date:  Do Not Know Yet :)
 ##           Author:  Daniël Rokven (kierownik) rokven@gmail.com
 ##  Original Author:  Frank Smit (FSX) FSX.NR01@gmail.com for Punbb
