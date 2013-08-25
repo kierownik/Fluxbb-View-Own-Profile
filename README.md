@@ -1,4 +1,5 @@
 # View Own Profile
+[![Project Status](http://stillmaintained.com/kierownik/Fluxbb-View-Own-Profile.png)](http://stillmaintained.com/kierownik/Fluxbb-View-Own-Profile)
 
 **Mod title:**  View Own Profile(while logged in)  
 **Mod version:**  1.0  
