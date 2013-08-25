@@ -1,5 +1,5 @@
 # View Own Profile
-[![Project Status](http://stillmaintained.com/kierownik/Fluxbb-View-Own-Profile.png)](http://stillmaintained.com/kierownik/Fluxbb-View-Own-Profile)
+[![Project Status](http://stillmaintained.com/kierownik/Fluxbb-View-Own-Profile.png)](http://stillmaintained.com/kierownik/Fluxbb-View-Own-Profile) [![Scrutinizer Continuous Inspections](https://scrutinizer-ci.com/g/kierownik/Fluxbb-View-Own-Profile/badges/general.png?s=f03b734ac9f2e73c61643b4221128e885b6407d8)](https://scrutinizer-ci.com/g/kierownik/Fluxbb-View-Own-Profile/)
 
 **Mod title:**  View Own Profile(while logged in)  
 **Mod version:**  1.0  
