@@ -2,8 +2,8 @@
 ##
 ##        Mod title:  View Own Profile(while logged in)
 ##
-##      Mod version:  1.0
-##  Works on FLuxBB:  1.5.4
+##      Mod version:  1.0.1
+##  Works on FLuxBB:  1.5.4, 1.5.3
 ##     Release date:  Do Not Know Yet :)
 ##           Author:  Daniël Rokven (kierownik) rokven@gmail.com
 ##  Original Author:  Frank Smit (FSX) FSX.NR01@gmail.com for Punbb
@@ -56,7 +56,7 @@ profile.php
 	else if ($user['email_setting'] == '1' && !$pun_user['is_guest'])
 		$email_field = '<a href="misc.php?email='.$id.'">'.$lang_common['Send email'].'</a>';
 	else
-		$email_field = $lang_profile['Private'];
+		$email_field = $lang_profile['private'];
 
 	$user_title_field = get_title($user);
 
@@ -207,7 +207,7 @@ lang/English/profile.php
 #---------[ 7. OPEN ]---------------------------------------------------------
 #
 
-iclude/functions.php
+include/functions.php
 
 #
 #---------[ 8. FIND (line: 526) ]---------------------------------------------
